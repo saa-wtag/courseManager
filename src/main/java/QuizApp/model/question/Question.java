@@ -27,7 +27,6 @@ public class Question implements Serializable{
     private String quesDetails;
 
     @OneToMany(mappedBy = "question", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
-    @JsonManagedReference
     private List<Option> options;
 
     public Question() {

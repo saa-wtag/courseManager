@@ -58,7 +58,7 @@ public class QuizServiceImpl implements QuizService{
                 .filter(option -> answerIds.contains(option.getOptionId()) && option.isIfCorrect())
                 .count();
 
-        quiz.setScore(score);
+        quiz.setScore(score/4);
         return quizDao.saveQuiz(quiz);
     }
 
